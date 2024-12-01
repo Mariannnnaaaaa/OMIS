@@ -1,0 +1,2 @@
+class UserProfileDisplayController:
+    pass

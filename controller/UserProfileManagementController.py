@@ -1,0 +1,2 @@
+class UserProfileManagementController:
+    pass

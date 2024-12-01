@@ -1,0 +1,2 @@
+class AuthorizationController:
+    pass

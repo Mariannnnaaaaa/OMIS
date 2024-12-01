@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Страница продавца</title>
+   
+</head>
+<body>
+
+<header>
+    <h1>Страница продавца</h1>
+</header>
+
+
+<nav>
+    <a href="catalog">Каталог</a>
+    <a href="favorites">Избранное</a>
+    <a href="cart">Корзина</a>
+    <a href="history">История покупок</a>
+    <a href="seller">Страница продавца</a>
+</nav>
+
+<p style="margin-left: 40px;">Управление продажей цифровых активов.</p>
+
+<button class="button" onclick="openForm()">Загрузить товар</button>
+<div class="container">
+<div class="form-popup" id="uploadForm">
+    <h2>Добавить новый товар</h2>
+    <label for="product-name">Название товара:</label>
+    <input type="text" id="product-name" required><br>
+    <label for="product-price">Цена:</label>
+    <input type="text" id="product-price" required><br>
+    <label for="product-description">Описание:</label><br>
+    <textarea id="product-description" rows="4" cols="50" required></textarea><br>
+    <button class="button" onclick="submitProduct()">Отправить</button>
+    <button class="button" onclick="closeForm()">Отмена</button>
+</div>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Товар">
+        <h2>Название товара</h2>
+        <p>Краткое описание товара.</p>
+        <p>Цена: $10</p>
+    </div>
+
+   
+</div>
+
+<footer>
+    <p>&copy; 2024 Цифровая платформа</p>
+</footer>
+
+<script>
+    function openForm() {
+        document.getElementById('uploadForm').style.display = 'block';
+    }
+    function closeForm() {
+        document.getElementById('uploadForm').style.display = 'none';
+    }
+    function submitProduct() {
+        const name = document.getElementById('product-name').value;
+        const price = document.getElementById('product-price').value;
+        const description = document.getElementById('product-description').value;
+        alert(`Товар "${name}" добавлен с ценой ${price} и описанием: ${description}`);
+        closeForm();
+    }
+</script>
+
+</body>
+</html>

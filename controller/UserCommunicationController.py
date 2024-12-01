@@ -1,0 +1,2 @@
+class UserCommunicationController:
+    pass
